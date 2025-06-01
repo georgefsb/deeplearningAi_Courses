@@ -1,0 +1,20 @@
+{
+  "name": "deeplearning.ai courses",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+   "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  }, 
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt"
+}
